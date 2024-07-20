@@ -19,11 +19,13 @@
 
 <body>
 
+
     <button class="menu-toggle" aria-label="Menu">☰</button>
     <div class="background">
+
         <header>
             <img src="/images/Bandeira_do_Maranhão.svg (2).svg" alt="Bandeira do Maranhão" width="150" height="60">
-            <h1>Bem vindo ao Maranhão</h1>
+            <h1>Bienvenidos a Maranhao</h1>
         </header>
 
         <nav id="menu">
@@ -35,10 +37,10 @@
                     <a class="nav-link" href="#">Índices de Destinos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Manual do Viajante</a>
+                    <a class="nav-link" href="#">Manual del viajero</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hotéis</a>
+                    <a class="nav-link" href="#">Hoteles</a>
                 </li>
             </ul>
 
@@ -54,14 +56,22 @@
                 </a>
             </div>
         </nav>
+
+
     </div>
+
+
+
+
+
+    
 
     <main>
         <div class="container">
             <nav class="navbar bg-body-tertiary" id="search">
                 <div class="container-fluid">
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Digite um ponto turistico"
+                        <input class="form-control me-2" type="search" placeholder="Entrar en un lugar turístico"
                             aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
@@ -70,38 +80,81 @@
         </div>
     </main>
 
+
+
     <section>
-        <% destinos.forEach(destino => { %>
+
+        <% destinos.forEach(destino=> { %>
             <div class="destino">
-                <h2 class="destino-nome"><%= destino.nome %></h2>
+                <h2 class="destino-nome">
+                    <%= destino.nome %>
+                </h2>
+
                 <div class="destino-informacoes">
-                    <p class="destino-descricao"><%= destino.descricao %></p>
+                    <p class="destino-descricao">
+                        <%= destino.descricao %>
+                            São Luís, a encantadora capital do Maranhão, é uma cidade rica em história, cultura e beleza
+                            natural. Fundada pelos franceses em 1612, a cidade é um testemunho vivo da colonização
+                            europeia
+                            no Brasil, com um centro histórico que é Patrimônio Mundial da UNESCO. Passear por suas ruas
+                            é
+                            como viajar no tempo, com seus casarões coloniais bem preservados, azulejos coloridos e uma
+                            atmosfera que remete aos séculos passados.
+                    </p>
+
                     <div class="destino-foto-container">
                         <img class="destino-foto" src="<%= destino.foto %>" alt="<%= destino.nome %>">
-                        <div class="destino-maps"><%- destino.endereco_google_maps %></div>
-                    </div>
-                </div>
-            </div>
-            <% destino.atrativos.forEach(atrativo => { %>
-                <div class="atrativo">
-                    <h3>Atrativos</h3>
-                    <h4 class="atrativos-nome"><%= atrativo.nome %></h4>
-                    <div class="atrativos-informacoes">
-                        <p class="atrativos-descricao"><%= atrativo.descricao %></p>
-                        <div class="atrativos-foto-container">
-                            <img class="atrativos-foto" src="<%= atrativo.foto_url %>" alt="<%= atrativo.nome %>">
-                            <div class="atrativos-maps"><%- atrativo.endereco_google_maps %></div>
+                        <div class="destino-maps">
+                            <%- destino.endereco_google_maps %>
                         </div>
                     </div>
                 </div>
-            <% }) %>
-        <% }) %>
+            </div>
+            <% destino.atrativos.forEach(atrativo=> { %>
+
+                <div class="atrativo">
+                    <h3>Atrativos</h3>
+
+                    <h4 class="atrativos-nome">
+                        <%= atrativo.nome %>
+                    </h4>
+                    <div class="atrativos-informacoes">
+
+                        <p class="atrativos-descricao">
+                            <%= atrativo.descricao %>
+                                O Centro Histórico de São Luís, capital do estado do Maranhão, é um dos tesouros
+                                culturais mais valiosos do Brasil. Declarado Patrimônio Mundial pela UNESCO em 1997, o
+                                centro histórico é um testemunho vibrante da colonização europeia no país e um destino
+                                imperdível para os amantes da história, da arquitetura e da cultura.
+                        </p>
+
+
+                        <div class="atrativos-foto-container">
+                            <img class="atrativos-foto" src="<%= atrativo.foto_url %>" alt="<%= atrativo.nome %>">
+                            <div class="atrativos-maps">
+                                <%- atrativo.endereco_google_maps %>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>    
+                    <% }) %>
+                        <% }) %>
+                        
+
     </section>
 
     <footer>
-        <p>© 2024 - Todos os direitos reservados.</p>
+
+        <p>© 2024 - Todos los derechos reservados.</p>
     </footer>
-    <script src="./images/menu.js"></script>
 </body>
 
+
+
+<script src="./images/menu.js"></script>
+
+
 </html>
+
+
