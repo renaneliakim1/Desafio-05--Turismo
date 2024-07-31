@@ -8,6 +8,7 @@
     body {
         display: flex;
         flex-direction: column;
+
     }
 
     .background {
@@ -44,7 +45,11 @@
 
     section {
         flex-grow: 1;
+        background-color: rgb(245, 239, 233);
+        padding-bottom: 20px;
     }
+
+
 
 
     nav {
@@ -70,7 +75,9 @@
     }
 
     main {
-        margin-top: 40px;
+        padding-top: 40px;
+        background-color: rgb(245, 239, 233);
+
 
     }
 
@@ -92,7 +99,21 @@
 
     .d-flex {
         width: 50vw;
+
     }
+
+
+    .form-control.form-control {
+        background-color: rgb(245, 239, 233);
+    }
+
+
+    .--bs-body-bg {
+        background-color: var(245, 239, 233);
+    }
+
+
+
 
     .bg-body-tertiary {
         background-color: transparent !important;
@@ -161,8 +182,8 @@
         position: absolute;
         bottom: 10px;
         right: 10px;
-        width: 150px;
-        height: 150px;
+        width: 25%;
+        height:  25%;
         border: 2px solid white;
         border-radius: 10px;
         overflow: hidden;
@@ -208,7 +229,8 @@
     footer {
         background-color: rgb(68, 68, 68);
         color: aliceblue;
-        margin-top: 40px;
+        width: 100%;
+        padding: 10px;
     }
 
     footer p {
@@ -303,8 +325,8 @@
             position: absolute;
             bottom: 10px;
             right: 10px;
-            width: 70px;
-            height: 70px;
+            width: 25%;
+            height:  25%;
             border: 2px solid white;
             border-radius: 10px;
             overflow: hidden;
