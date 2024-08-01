@@ -4,6 +4,9 @@ const pool = require("./db");
 const app = express();
 const port = 3000;
 
+
+
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
@@ -29,6 +32,8 @@ app.get("/", async (req, res) => {
   }
 });
 
+
+/*  muito complexo 
 app.get("/en", async (req, res) => {
   try {
     const destinosResult = await pool.query("SELECT * FROM Destino");
@@ -68,7 +73,7 @@ app.get("/es", async (req, res) => {
     res.status(500).send("Erro no servidor");
   }
 });
-
+ */
 
 
 

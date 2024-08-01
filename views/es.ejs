@@ -62,12 +62,14 @@
 
     
 
+  
+
     <main>
         <div class="container">
             <nav class="navbar bg-body-tertiary" id="search">
                 <div class="container-fluid">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Entrar en un lugar turístico"
+                    <form class="d-flex" role="search" action="/search" method="get">
+                        <input class="form-control me-2" type="search" name="q" placeholder="Entrar en un lugar turístico"
                             aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>

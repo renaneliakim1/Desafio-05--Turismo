@@ -56,19 +56,13 @@
 
 
     </div>
-
-
-
-
-
     
-
     <main>
         <div class="container">
             <nav class="navbar bg-body-tertiary" id="search">
                 <div class="container-fluid">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Enter a tourist spot"
+                    <form class="d-flex" role="search" action="/search" method="get">
+                        <input class="form-control me-2" type="search" name="q" placeholder="Enter a tourist spot"
                             aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
