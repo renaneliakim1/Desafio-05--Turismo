@@ -1,20 +1,24 @@
 const { Pool } = require('pg');
+const dotenv = require('dotenv');
 
-const connectionString = 'postgres://avnadmin:AVNS_tswV_5idt54dxgbDiib@desafio-v-desafiov.i.aivencloud.com:28847/defaultdb';
+dotenv.config();
+
+const connectionString = process.env.DB;
 
 const pool = new Pool({
   connectionString,
   ssl: {
-    rejectUnauthorized: false,
+    rejectUnauthorized: false 
   }
 });
 
-pool.connect((err, client, release) => {
-  if (err) {
-    return console.error('Error acquiring client', err.stack);
-  }
-  console.log('Connected to the database');
-  release();
-});
+pool.connect()
+  .then(client => {
+    console.log('Connected to the database');
+    client.release();
+  })
+  .catch(err => {
+    console.error('Error acquiring client', err.stack);
+  });
 
 module.exports = pool;
