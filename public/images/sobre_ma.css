@@ -1,16 +1,15 @@
+/* CSS */
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-
-
 }
 
 .background {
@@ -22,25 +21,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
-
 }
-
-section {
-    flex-grow: 1;
-    background-color: rgb(245, 239, 233);
-    padding-bottom: 100px;
-    padding: 0% 27% 5% 27%;
-}
-
-
-section h1 {
-    text-align: center;
-    font-weight: 700;
-    color: rgb(0, 0, 0);
-}
-
-
 
 header {
     display: flex;
@@ -49,11 +30,7 @@ header {
     width: auto;
     gap: 1rem;
     padding: 20px;
-
 }
-
-
-
 
 nav {
     display: flex;
@@ -74,23 +51,17 @@ a.nav-link {
 
 a.nav-link:hover {
     color: rgb(222, 27, 27);
-
 }
 
 main {
     padding-top: 40px;
     padding-bottom: 100px;
     background-color: rgb(245, 239, 233);
-
-
-
-
 }
 
 .form-control.form-control {
     background-color: rgb(245, 239, 233);
 }
-
 
 .container {
     display: flex;
@@ -100,13 +71,9 @@ main {
     height: 100%;
 }
 
-
-
 .bg-body-tertiary {
-    --bs-tertiary-bg-rgb: none
+    --bs-tertiary-bg-rgb: none;
 }
-
-
 
 .d-flex {
     width: 50vw;
@@ -116,14 +83,11 @@ main {
     background-color: transparent !important;
 }
 
-
-
 /* menu button css */
 
 .menu-toggle {
     display: none;
 }
-
 
 .menu-toggle {
     font-size: 32px;
@@ -134,93 +98,36 @@ main {
     margin: 12px;
 }
 
-h2,
-h3 {
+section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: rgb(245, 239, 233);
+    padding-bottom: 100px;
+    padding: 0% 27% 5% 27%;
+}
+
+section h1 {
     text-align: center;
-    margin: 40px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+h1, h2 {
+    text-align: center;
+    padding: 20px;
 }
 
 p {
     text-align: justify;
 }
 
-.destino {
-    padding-top: 40px;
-   
-}
-
-.destino-informacoes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    gap: 20px;
-
-}
-
-.destino-foto-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.destino-foto {
+section img {
     display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.destino-maps {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 25%;
-    height:  25%;
-    border: 2px solid white;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.atrativos{
-    padding-top: 40px;
-}
-
-.atrativos-nome {
-    text-align: center;
-}
-
-
-.atrativos-informacoes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    gap: 20px;
-}
-
-.atrativos-foto-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.atrativos-foto {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.atrativos-maps {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 150px;
-    height: 150px;
-    border: 2px solid white;
-    border-radius: 10px;
-    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -236,10 +143,7 @@ footer {
 
 footer p {
     text-align: center;
-
 }
-
-
 
 ::-webkit-scrollbar {
     width: 7px;
@@ -253,15 +157,9 @@ footer p {
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background-color: rgb(202, 57, 57);
-
 }
 
 
-
-
-
-
-/* 
 @media (width <=1024px) {
 
     section img {
@@ -275,10 +173,6 @@ footer p {
 
 
 }
- */
-
-
-
 
 
 
@@ -290,20 +184,7 @@ footer p {
         justify-content: center;
     }
 
-    section h1 {
-        text-align: center;
-        font-size: 1.4rem;
-        padding-top: 40px;
-
-    }
-
-    section {
-        flex-grow: 1;
-        background-color: rgb(245, 239, 233);
-        padding-bottom: 100px;
-        padding: 0% 5% 5% 5%;
-    }
-
+   
     nav {
         flex-direction: column;
     }
@@ -311,7 +192,6 @@ footer p {
     nav ul {
         flex-direction: column;
     }
-
 
     .menu-toggle {
         display: block;
@@ -326,34 +206,42 @@ footer p {
 
     #menu {
         display: none;
-
     }
 
     .d-flex {
         width: 80vw;
         display: flex;
         justify-content: center;
+    } 
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        background-color: rgb(245, 239, 233);
+        padding-bottom: 100px;
+        padding: 0% 5% 5% 5%;
     }
 
-    .destino {
+    section h1 {
+        text-align: center;
+        font-size: 1.4rem;
         padding-top: 40px;
-        margin-left: 5%;
-        margin-right: 5%;
     }
 
 
-    .destino-maps,
-    .atrativos-maps {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        width: 25%;
-        height:  25%;
-        border: 2px solid white;
-        border-radius: 10px;
-        overflow: hidden;
+    section img {
+        display: flex;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
+
+ 
+   
 
     ::-webkit-scrollbar {
         width: 7px;
@@ -367,15 +255,5 @@ footer p {
     ::-webkit-scrollbar-thumb {
         border-radius: 8px;
         background-color: rgb(202, 57, 57);
-
     }
-
-
-
-
-
-
-
-
-
 }

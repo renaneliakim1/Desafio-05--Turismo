@@ -47,6 +47,8 @@
         flex-grow: 1;
         background-color: rgb(245, 239, 233);
         padding-bottom: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
 
