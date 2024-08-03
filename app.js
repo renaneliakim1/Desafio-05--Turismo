@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const ejs = require('ejs');
 const pool = require("./db");
 
 class TourismApp {
@@ -13,9 +14,10 @@ class TourismApp {
   }
 
   setupViews() {
-    this.app.set("views", path.join(__dirname, "views"));
-    this.app.set("view engine", "ejs");
+    this.app.set('views', path.join(__dirname, 'views'));
+    this.app.set('view engine', 'ejs');
   }
+  
 
   setupStaticFiles() {
     this.app.use(express.static(path.join(__dirname, "public")));
